@@ -1,9 +1,5 @@
 <template>
-    <div class="accueil">
-        <header>
-            <h1>Mon Portfolio</h1>
-            <p>Bienvenue sur mon portfolio</p>
-        </header>
+    <div class="projets">
         <section>
             <h2>Projets</h2>
             <ul>
@@ -18,7 +14,7 @@
 
 <script>
 export default {
-    name: 'Accueil',
+    name: 'projets',
     data() {
         return {
             projects: [
