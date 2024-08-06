@@ -1,7 +1,7 @@
 <template>
     <div class="cv">
         <header>
-          CV
+          à propos
         </header>
 
     </div>
