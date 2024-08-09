@@ -5,7 +5,9 @@ import HeaderType from "@/components/HeaderType.vue";
 
 <template>
   <header>
+      <a href="/" >
       <HeaderType msg="Elane Grandmougin - mon portfolio" />
+      </a>
       <nav>
           <router-link :to="{name: 'Projets'}" >Mes projets</router-link>
           <router-link to="/apropos">A propos</router-link>
