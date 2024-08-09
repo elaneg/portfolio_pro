@@ -4,19 +4,29 @@ import HeaderType from "@/components/HeaderType.vue";
 </script>
 
 <template>
-    <header class="header">
-        <a href="/" class="logo-link">
-            <HeaderType msg="Elane Grandmougin - mon portfolio" />
-        </a>
-        <nav class="nav">
-            <router-link :to="{name: 'Projets'}" class="nav-link">Mes projets</router-link>
-            <router-link to="/apropos" class="nav-link">À propos</router-link>
-        </nav>
-    </header>
+    <div class="app">
+        <header class="header">
+            <a href="/" class="logo-link">
+                <HeaderType msg="Elane Grandmougin - mon portfolio" />
+            </a>
+            <nav class="nav">
+                <router-link :to="{ name: 'Projets' }" class="nav-link">Mes projets</router-link>
+                <router-link to="/apropos" class="nav-link">À propos</router-link>
+            </nav>
+        </header>
 
-    <main class="main-content">
-        <RouterView />
-    </main>
+        <main class="main-content">
+            <RouterView />
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 - Elane Grandmougin</p>
+            <p>
+                <a href="https://github.com/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon GitHub</a> |
+                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon LinkedIn</a>
+            </p>
+        </footer>
+    </div>
 </template>
 
 <style scoped>
@@ -36,6 +46,12 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Style du header */
@@ -79,9 +95,34 @@ body {
 
 /* Style du contenu principal */
 .main-content {
-    padding: 80px 20px 20px; /* Ajoute un padding supérieur pour éviter que le contenu ne soit caché sous le header fixe */
-    max-width: 1200px;
+    padding: 80px 20px 60px; /* Ajoute un padding supérieur pour éviter que le contenu ne soit caché sous le header fixe */
     margin: 0 auto;
+    flex: 1; /* Permet au contenu principal de s'étendre pour occuper l'espace restant */
+}
+
+/* Style du footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2vh;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #42b983;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* Style pour écrans larges */
@@ -95,7 +136,7 @@ body {
     }
 
     .main-content {
-        padding: 100px 20px 20px; /* Augmente le padding supérieur pour les écrans larges */
+        padding: 100px 20px 60px; /* Augmente le padding supérieur pour les écrans larges */
     }
 }
 </style>
