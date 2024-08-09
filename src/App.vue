@@ -1,14 +1,19 @@
 <script setup>
-import Accueil from "@/components/Accueil.vue";
+import { RouterLink, RouterView } from 'vue-router'
+import HeaderType from "@/components/HeaderType.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+      <HeaderType msg="Elane Grandmougin - mon portfolio" />
+      <nav>
+          <router-link :to="{name: 'Projets'}" >Mes projets</router-link>
+          <router-link to="/cv">A propos</router-link>
+      </nav>
   </header>
 
   <main>
-    <Accueil />
+      <RouterView />
   </main>
 </template>
 
