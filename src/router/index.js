@@ -11,8 +11,8 @@ const router = createRouter({
             component: Projets
         },
         {
-            path: '/cv',
-            name: 'Cv',
+            path: '/apropos',
+            name: 'Apropos',
             component: Cv
         },
         // {
