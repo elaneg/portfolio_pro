@@ -4,14 +4,21 @@
           à propos
         </header>
 
+        <section class="download">
+            <a :href="cvLink" download="cv_elane_grandmougin.pdf">
+                <button>Télécharger mon CV</button>
+            </a>
+        </section>
+
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Cv',
+    name: 'Apropos',
     data() {
         return {
+            cvLink: '/cv_elane_grandmougin.pdf',
         };
     }
 };
@@ -33,6 +40,25 @@ header h1 {
 }
 section {
     margin-bottom: 20px;
+
+    section.download {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    section.download button {
+        background-color: #42b983;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    section.download button:hover {
+        background-color: #369f70;
+    }
 }
 section h2 {
     border-bottom: 1px solid #ccc;
