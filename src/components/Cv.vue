@@ -1,7 +1,7 @@
 <template>
     <div class="cv">
         <header>
-          à propos
+          A propos
         </header>
 
         <section class="download">
