@@ -95,7 +95,8 @@ body {
 
 /* Style du contenu principal */
 .main-content {
-    padding: 80px 20px 60px; /* Ajoute un padding supérieur pour éviter que le contenu ne soit caché sous le header fixe */
+    padding: 80px 20px 100px; /* Augmente le padding inférieur pour éviter le chevauchement avec le footer */
+    max-width: 1200px;
     margin: 0 auto;
     flex: 1; /* Permet au contenu principal de s'étendre pour occuper l'espace restant */
 }
@@ -136,7 +137,7 @@ body {
     }
 
     .main-content {
-        padding: 100px 20px 60px; /* Augmente le padding supérieur pour les écrans larges */
+        padding: 100px 20px 100px; /* Augmente le padding inférieur pour les écrans larges */
     }
 }
 </style>

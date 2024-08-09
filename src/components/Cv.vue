@@ -69,10 +69,10 @@ section h2 {
 
 /* Section pour le bouton de téléchargement */
 section.download {
-    position: fixed; /* Fixe le bouton en bas à droite */
-    bottom: 20px; /* Distance du bas de la fenêtre */
-    right: 20px; /* Distance du côté droit de la fenêtre */
-    text-align: right; /* Aligne le texte à droite */
+    position: fixed;
+    top: 75vh;
+    right: 20px;
+    text-align: right;
 }
 
 section.download button {
