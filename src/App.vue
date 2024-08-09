@@ -1,29 +1,33 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterLink, RouterView, useRoute} from 'vue-router'
 import HeaderType from "@/components/HeaderType.vue";
+
+const route = useRoute();
 </script>
 
 <template>
     <div class="app">
         <header class="header">
             <a href="/" class="logo-link">
-                <HeaderType msg="Elane Grandmougin - mon portfolio" />
+                <HeaderType msg="Elane Grandmougin - mon portfolio"/>
             </a>
             <nav class="nav">
-                <router-link :to="{ name: 'Projets' }" class="nav-link">Mes projets</router-link>
+                <router-link to="/projets" class="nav-link">Mes projets</router-link>
                 <router-link to="/apropos" class="nav-link">À propos</router-link>
             </nav>
         </header>
 
+
         <main class="main-content">
-            <RouterView />
+            <RouterView/>
         </main>
 
         <footer class="footer">
             <p>&copy; 2024 - Elane Grandmougin</p>
             <p>
                 <a href="https://github.com/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon GitHub</a> |
-                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon LinkedIn</a>
+                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon
+                    LinkedIn</a>
             </p>
         </footer>
     </div>
@@ -48,11 +52,13 @@ body {
     padding: 0;
 }
 
-.app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+/*.app {*/
+/*    display: flex;*/
+/*    min-height: 100vh;*/
+/*    width: 100%;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
 /* Style du header */
 .header {
@@ -90,13 +96,13 @@ body {
 
 .nav-link:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: #008cff;
 }
 
 /* Style du contenu principal */
 .main-content {
-    padding: 80px 20px 100px; /* Augmente le padding inférieur pour éviter le chevauchement avec le footer */
-    max-width: 1200px;
+    /*padding: 80px 20px 100px; !* Augmente le padding inférieur pour éviter le chevauchement avec le footer *!*/
+    /*max-width: 1200px;*/
     margin: 0 auto;
     flex: 1; /* Permet au contenu principal de s'étendre pour occuper l'espace restant */
 }
@@ -107,10 +113,10 @@ body {
     color: white;
     text-align: center;
     padding: 2vh;
-    width:100%;
-    position:absolute;
-    bottom:0;
-    left:0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .footer p {
@@ -134,10 +140,6 @@ body {
 
     .nav-link {
         font-size: 1.2em;
-    }
-
-    .main-content {
-        padding: 100px 20px 100px; /* Augmente le padding inférieur pour les écrans larges */
     }
 }
 </style>
