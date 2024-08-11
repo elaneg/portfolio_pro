@@ -1,14 +1,15 @@
 <template>
     <div class="contact-container">
-        <h1>Me contacter</h1>
+        <h1>Me contacter <br /><br /></h1>
         <div class="contact-details">
-            <p><strong>Par mail :</strong> elane.grandmougin@gmail.com</p>
+            Par mail :
+            <a href="mailto:elane.grandmougin@gmail.com" class="mailto">elane.grandmougin@gmail.com </a><br /><br />
             <div class="social-links">
-                <p><strong>Retrouvez-moi sur :</strong></p>
+                <p><strong>Et retrouvez-moi sur :</strong></p>
                 <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a> |
-                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </a>
             </div>
@@ -27,18 +28,26 @@ export default {
     font-family: "PT Serif", serif;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10vh;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     text-align: center;
 }
 
+.contact-container h1 {
+    font-size: 3.2em;
+}
+
 .contact-details {
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 
 .contact-details p {
     margin: 10px 0;
+}
+
+.social-links {
+    box-shadow: 0 2px 4px rgba(0, 0, 0,100);
 }
 
 .social-links a {

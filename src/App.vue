@@ -1,20 +1,52 @@
 <template>
     <div class="app">
-        <header class="header">
+        <header class="header" aria-label="Menu principal">
             <a href="/" class="logo-link">
-                <img :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' " alt="Accueil" :class=" isDarkMode ? 'logo-svg-dark' : 'logo-svg'"/>
+                <img
+                    :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' "
+                    alt="Accueil"
+                    :class=" isDarkMode ? 'logo-svg-dark' : 'logo-svg'"
+                    aria-label="Retour à l'accueil"
+                />
             </a>
-            <nav class="nav">
-                <router-link to="/projets" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
-                    <img :src="isDarkMode ? '../public/logo_projets_night.svg' : '../public/logo_projets.svg'" alt="projets" class="logo-svg-nav"/>
+            <nav class="nav" aria-label="Navigation principale">
+                <router-link
+                    to="/projets"
+                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
+                    aria-label="Accéder à la page de mes projets"
+                >
+                    <img
+                        :src="isDarkMode ? '../public/logo_projets_night.svg' : '../public/logo_projets.svg'"
+                        alt="projets"
+                        class="logo-svg-nav"
+                        aria-hidden="true"
+                    />
                     Mes projets
                 </router-link>
-                <router-link to="/apropos" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
-                    <img :src="isDarkMode ? '../public/logo_about_night.svg' : '../public/logo_about.svg'" alt="à propos" class="logo-svg-nav"/>
+                <router-link
+                    to="/apropos"
+                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
+                    aria-label="Accéder à la page à propos de moi"
+                >
+                    <img
+                        :src="isDarkMode ? '../public/logo_about_night.svg' : '../public/logo_about.svg'"
+                        alt="à propos"
+                        class="logo-svg-nav"
+                        aria-hidden="true"
+                    />
                     À propos
                 </router-link>
-                <router-link to="/contact" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
-                    <img :src=" isDarkMode ? '../public/logo_contact_night.svg' : '../public/logo_contact.svg' " alt="contact" class="logo-svg-nav"/>
+                <router-link
+                    to="/contact"
+                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
+                    aria-label="Accéder à la page de contact"
+                >
+                    <img
+                        :src=" isDarkMode ? '../public/logo_contact_night.svg' : '../public/logo_contact.svg' "
+                        alt="contact"
+                        class="logo-svg-nav"
+                        aria-hidden="true"
+                    />
                     Me contacter
                 </router-link>
                 <img
@@ -22,15 +54,17 @@
                     alt="toggle theme"
                     class="logo-svg-theme"
                     @click="toggleTheme"
+                    aria-label="Changer le thème"
+                    role="button"
                 />
             </nav>
         </header>
 
-        <main class="main-content">
+        <main class="main-content" aria-label="Contenu principal">
             <RouterView/>
         </main>
 
-        <footer :class="isDarkMode ? 'footer_dark' : 'footer'">
+        <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
         </footer>
     </div>
