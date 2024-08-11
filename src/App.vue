@@ -84,7 +84,9 @@ body {
     gap: 20px;
 }
 
-.nav-link {
+.nav-link,
+.footer a
+{
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
@@ -94,9 +96,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.footer a:hover {
+    text-decoration: underline;
     background-color: var(--primary-color);
-    color: #008cff;
+    color: #453de1;
 }
 
 /* Style du contenu principal */
