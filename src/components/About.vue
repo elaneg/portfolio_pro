@@ -1,15 +1,17 @@
 <template>
-    <div class="cv">
+    <div class="cv" aria-labelledby="cv-title">
 
-        <section class="description">
-            <h2>À propos de moi</h2>
-            <p class="resume">{{ careerSummary }}</p>
+        <section class="description" aria-labelledby="about-title">
+            <h2 id="about-title">À propos de moi</h2>
+            <p class="resume" aria-label="Résumé de carrière">{{ careerSummary }}</p>
         </section>
 
         <!-- Section pour le bouton de téléchargement fixé en bas à droite -->
-        <section class="download">
+        <section class="download" aria-label="Section de téléchargement du CV">
             <a :href="cvLink" download="cv_elane_grandmougin.pdf">
-                <button role="button" aria-label="Télécharger le CV" style="font-family: 'PT Serif', serif">Télécharger mon CV</button>
+                <button role="button" aria-label="Télécharger mon CV en PDF" style="font-family: 'PT Serif', serif">
+                    Télécharger mon CV
+                </button>
             </a>
         </section>
     </div>

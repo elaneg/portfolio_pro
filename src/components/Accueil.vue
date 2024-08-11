@@ -1,17 +1,16 @@
 <template>
-    <div class="accueil">
+    <div class="accueil" aria-labelledby="accueil-title">
         <div class="taglines">
-        <p class="tagline">
-            Bonjour, je suis <strong>Elane Grandmougin</strong>, développeuse <strong>full-stack</strong>.
-        </p>
-        <p class="tagline2">Je développe des applications en placant l'expérience utilisateur et l'inclusivité au coeur
-            de mes projets.</p>
+            <p class="tagline">
+                Bonjour, je suis <strong>Elane Grandmougin</strong>, développeuse <strong>full-stack</strong>.
+            </p>
+            <p class="tagline2">Je développe des applications en plaçant l'expérience utilisateur et l'inclusivité au cœur de mes projets.</p>
         </div>
-        <div class="photo-container">
-            <img :src="photoUrl" alt="Photo" class="photo"/>
+        <div class="photo-container" aria-label="Photo de Elane Grandmougin">
+            <img :src="photoUrl" alt="Photo de Elane Grandmougin" class="photo"/>
         </div>
     </div>
-      <img src="../../public/illustration_accueil.svg" alt="illustration" class="illu"/>
+    <img src="../../public/illustration_accueil.svg" alt="Illustration d'accueil" class="illu"/>
 </template>
 
 <script>
@@ -26,7 +25,6 @@ export default {
 </script>
 
 <style scoped>
-
 template {
     font-family: "PT Serif", serif;
 }
@@ -81,5 +79,4 @@ template {
     left: 0;
     z-index: 1;
 }
-
 </style>
