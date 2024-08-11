@@ -7,6 +7,7 @@
             <img :src="photoUrl" alt="Photo" class="photo"/>
         </div>
     </div>
+<!--    <img src="../../public/illustration_accueil.svg" alt="illustration" class="illu"/>-->
 </template>
 
 <script>
@@ -34,8 +35,10 @@ template{
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 3.2em;
     margin: 1vh 20vh 0 0;
+    text-align: left;
+    z-index: 2;
 }
 
 .photo {
@@ -50,5 +53,12 @@ template{
     transform: scale(1.5);
     transition: transform 0.7s ease;
 }
+
+/*.illu {*/
+/*    position: absolute;*/
+/*    top: 30%;*/
+/*    left: 10%;*/
+/*    z-index: 1;*/
+/*}*/
 
 </style>
