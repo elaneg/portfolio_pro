@@ -84,7 +84,8 @@ body {
 
 .logo-svg {
     margin-left: 1vh;
-    width: 8vh;
+    padding-bottom: 1vh;
+    width: 7vh;
     height: auto;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
@@ -98,7 +99,8 @@ body {
 
 .logo-svg-dark {
     margin-left: 1vh;
-    width: 8vh;
+    padding-bottom: 1vh;
+    width: 7vh;
     height: auto;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
