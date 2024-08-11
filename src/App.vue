@@ -30,13 +30,12 @@ const route = useRoute();
 </template>
 
 <style scoped>
-/* Variables de couleurs pour une personnalisation facile */
 :root {
-    --primary-color: #42b983; /* Vert pour les éléments principaux */
+    --primary-color: #453de1; /* Vert pour les éléments principaux */
     --secondary-color: #34495e; /* Bleu foncé pour le texte */
     --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #2c3e50; /* Couleur du texte principal */
-    --link-hover-color: #369f70; /* Couleur au survol des liens */
+    --text-color: #393c41; /* Couleur du texte principal */
+    --link-hover-color: #352fa2; /* Couleur au survol des liens */
 }
 
 /* Style général */
@@ -63,7 +62,7 @@ body {
     align-items: center;
     padding: 1vh;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     position: fixed;
     top: 0;
     left: 0;
@@ -80,22 +79,21 @@ body {
     gap: 20px;
 }
 
-.nav-link,
-.footer a {
+.nav-link {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
 }
 
-.nav-link:hover,
-.footer a:hover {
-    text-decoration: underline;
+.nav-link:hover {
     background-color: var(--primary-color);
     color: #453de1;
+    background-size: 100% 100%;
 }
 
 /*!* Style du contenu principal *!*/
@@ -124,12 +122,8 @@ body {
 }
 
 .footer a {
-    color: #42b983;
+    color: var(--primary-color);
     text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
 }
 
 </style>
