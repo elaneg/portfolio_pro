@@ -1,8 +1,5 @@
 <template>
     <div class="cv">
-        <header>
-            A propos
-        </header>
 
         <section class="description">
             <h2>À propos de moi</h2>

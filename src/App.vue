@@ -14,6 +14,7 @@ const route = useRoute();
             <nav class="nav">
                 <router-link to="/projets" class="nav-link">Mes projets</router-link>
                 <router-link to="/apropos" class="nav-link">À propos</router-link>
+                <router-link to="/contact" class="nav-link">Me contacter</router-link>
             </nav>
         </header>
 
@@ -36,11 +37,11 @@ const route = useRoute();
 <style scoped>
 /* Variables de couleurs pour une personnalisation facile */
 :root {
-    --primary-color: #007BFF; /* Vert pour les éléments principaux */
-    --secondary-color: #333333; /* Bleu foncé pour le texte */
+    --primary-color: #42b983; /* Vert pour les éléments principaux */
+    --secondary-color: #34495e; /* Bleu foncé pour le texte */
     --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #333333; /* Couleur du texte principal */
-    --link-hover-color: #28A745; /* Couleur au survol des liens */
+    --text-color: #2c3e50; /* Couleur du texte principal */
+    --link-hover-color: #369f70; /* Couleur au survol des liens */
 }
 
 /* Style général */
@@ -65,14 +66,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1vh;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fixe le header en haut */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Assure que le header est au-dessus du contenu */
+    z-index: 1000;
 }
 
 .logo-link {
@@ -85,8 +86,7 @@ body {
 }
 
 .nav-link,
-.footer a
-{
+.footer a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
@@ -103,20 +103,20 @@ body {
     color: #453de1;
 }
 
-/* Style du contenu principal */
-.main-content {
-    /*padding: 80px 20px 100px; !* Augmente le padding inférieur pour éviter le chevauchement avec le footer *!*/
-    /*max-width: 1200px;*/
-    margin: 0 auto;
-    flex: 1; /* Permet au contenu principal de s'étendre pour occuper l'espace restant */
-}
+/*!* Style du contenu principal *!*/
+/*.main-content {*/
+/*    padding-bottom: 60px;*/
+/*    padding-top: 15vh;*/
+/*    margin: 0 auto;*/
+/*    flex: 1;*/
+/*}*/
 
 /* Style du footer */
 .footer {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 2vh;
+    padding: 1vh;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -136,14 +136,4 @@ body {
     text-decoration: underline;
 }
 
-/* Style pour écrans larges */
-@media (min-width: 1024px) {
-    .header {
-        padding: 20px 40px;
-    }
-
-    .nav-link {
-        font-size: 1.2em;
-    }
-}
 </style>
