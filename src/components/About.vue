@@ -3,7 +3,7 @@
 
         <section class="description">
             <h2>À propos de moi</h2>
-            <p>{{ careerSummary }}</p>
+            <p class="resume">{{ careerSummary }}</p>
         </section>
 
         <!-- Section pour le bouton de téléchargement fixé en bas à droite -->
@@ -63,6 +63,11 @@ header h1 {
 
 .description h2 {
     font-size: 6vh;
+}
+
+.resume {
+    text-align: left;
+    font-size: 1.2em;
 }
 
 section {
