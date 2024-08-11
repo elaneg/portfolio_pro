@@ -3,8 +3,26 @@
 :root {
   --primary-color: #453de1;
   --secondary-color: #615cb4;
-  --background-color: #ffffff;
-  --text-color: #000000;
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #242446;
+  --text-color-dark: #ffffff;
+}
+
+/* Thème clair */
+body.light-mode, header.light-mode {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+/* Thème sombre */
+body.dark-mode, header.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body, header {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #app {
@@ -15,22 +33,16 @@
   font-family: "PT Serif", serif;;
 }
 
-a,
-.blue {
-  text-decoration: none;
-  color: var(--primary-color);
-  transition: 0.4s;
-  padding: 3px;
-}
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+/*@media (min-width: 1024px) {*/
+/*  body {*/
+/*    display: flex;*/
+/*    place-items: center;*/
+/*    transition: background-color 0.3s ease, color 0.3s ease;*/
+/*  }*/
 
-  #app {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
+/*  #app {*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    padding: 0 2rem;*/
+/*  }*/
+/*}*/

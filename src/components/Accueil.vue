@@ -31,18 +31,10 @@ template{
     justify-content: center;
     margin: 20vh auto;
     align-items: center;
-    background-color: var(--background-color);
-}
-
-.accueil-header h1 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 20px;
 }
 
 .tagline {
     font-size: 1.2em;
-    color: var(--text-color);
     margin: 1vh 20vh 0 0;
 }
 
