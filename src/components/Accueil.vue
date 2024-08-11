@@ -1,7 +1,7 @@
 <template>
     <div class="accueil">
         <p class="tagline">
-            Bienvenue sur mon portfolio où vous pourrez découvrir mes différents projets.
+            Bonjour, je suis Elane Grandmougin, développeuse full-stack.
         </p>
         <div class="photo-container">
             <img :src="photoUrl" alt="Photo" class="photo"/>
@@ -48,6 +48,12 @@ export default {
     border-radius: 50%;
     display: block;
     margin-top: 20px;
+    transition: transform 0.5s ease;
+}
+
+.photo:hover {
+    transform: scale(1.5);
+    transition: transform 0.7s ease;
 }
 
 @media (min-width: 1024px) {

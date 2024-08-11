@@ -9,7 +9,7 @@ const route = useRoute();
     <div class="app">
         <header class="header">
             <a href="/" class="logo-link">
-                <HeaderType msg="Elane Grandmougin - mon portfolio"/>
+                <img src="../public/logo_home.svg" alt="Accueil" class="logo-svg"/>
             </a>
             <nav class="nav">
                 <router-link to="/projets" class="nav-link">Mes projets</router-link>
@@ -25,23 +25,17 @@ const route = useRoute();
 
         <footer class="footer">
             <p>&copy; 2024 - Elane Grandmougin</p>
-            <p>
-                <a href="https://github.com/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon GitHub</a> |
-                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon
-                    LinkedIn</a>
-            </p>
         </footer>
     </div>
 </template>
 
 <style scoped>
-/* Variables de couleurs pour une personnalisation facile */
 :root {
-    --primary-color: #42b983; /* Vert pour les éléments principaux */
+    --primary-color: #453de1; /* Vert pour les éléments principaux */
     --secondary-color: #34495e; /* Bleu foncé pour le texte */
     --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #2c3e50; /* Couleur du texte principal */
-    --link-hover-color: #369f70; /* Couleur au survol des liens */
+    --text-color: #393c41; /* Couleur du texte principal */
+    --link-hover-color: #352fa2; /* Couleur au survol des liens */
 }
 
 /* Style général */
@@ -68,12 +62,28 @@ body {
     align-items: center;
     padding: 1vh;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.logo-svg {
+    width: 10vh;
+    height: auto;
+    display: block;
+    color: #42b983;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+}
+
+.logo-svg:hover {
+    background-color: var(--primary-color);
+    color: #453de1;
+    background-size: 100% 100%;
 }
 
 .logo-link {
@@ -85,22 +95,21 @@ body {
     gap: 20px;
 }
 
-.nav-link,
-.footer a {
+.nav-link {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
 }
 
-.nav-link:hover,
-.footer a:hover {
-    text-decoration: underline;
+.nav-link:hover {
     background-color: var(--primary-color);
     color: #453de1;
+    background-size: 100% 100%;
 }
 
 /*!* Style du contenu principal *!*/
@@ -113,9 +122,10 @@ body {
 
 /* Style du footer */
 .footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
+    background-color: #ffffff;
+    color: #1b0742;
+    text-align: left;
+    margin-left: 2vh;
     padding: 1vh;
     width: 100%;
     position: absolute;
@@ -128,12 +138,8 @@ body {
 }
 
 .footer a {
-    color: #42b983;
+    color: var(--primary-color);
     text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
 }
 
 </style>
