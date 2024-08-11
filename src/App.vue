@@ -9,7 +9,7 @@ const route = useRoute();
     <div class="app">
         <header class="header">
             <a href="/" class="logo-link">
-                <HeaderType msg="Elane Grandmougin - mon portfolio"/>
+                <img src="../public/logo_home.svg" alt="Accueil" class="logo-svg"/>
             </a>
             <nav class="nav">
                 <router-link to="/projets" class="nav-link">Mes projets</router-link>
@@ -68,6 +68,22 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.logo-svg {
+    width: 10vh;
+    height: auto;
+    display: block;
+    color: #42b983;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+}
+
+.logo-svg:hover {
+    background-color: var(--primary-color);
+    color: #453de1;
+    background-size: 100% 100%;
 }
 
 .logo-link {

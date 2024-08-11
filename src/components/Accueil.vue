@@ -1,7 +1,7 @@
 <template>
     <div class="accueil">
         <p class="tagline">
-            Bienvenue sur mon portfolio où vous pourrez découvrir mes différents projets.
+            Bonjour, je suis Elane Grandmougin, développeuse full-stack.
         </p>
         <div class="photo-container">
             <img :src="photoUrl" alt="Photo" class="photo"/>
