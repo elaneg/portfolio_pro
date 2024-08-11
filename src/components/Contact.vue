@@ -2,8 +2,7 @@
     <div class="contact-container">
         <h1>Me contacter</h1>
         <div class="contact-details">
-            <p><strong>Email :</strong> elane.grandmougin@gmail.com</p>
-            <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p>
+            <p><strong>Par mail :</strong> elane.grandmougin@gmail.com</p>
             <div class="social-links">
                 <p><strong>Retrouvez-moi sur :</strong></p>
                 <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer">
@@ -25,7 +24,7 @@ export default {
 
 <style scoped>
 .contact-container {
-    /*max-width: 600px;*/
+    font-family: "PT Serif", serif;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -45,7 +44,7 @@ export default {
 }
 
 .social-links a {
-    color: #42b983;
+    color: var(--secondary-color);
     text-decoration: none;
     margin: 0 5px;
 }

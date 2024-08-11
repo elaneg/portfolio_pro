@@ -1,6 +1,5 @@
 <script setup>
 import {RouterLink, RouterView, useRoute} from 'vue-router'
-import HeaderType from "@/components/HeaderType.vue";
 
 const route = useRoute();
 </script>
@@ -36,17 +35,10 @@ const route = useRoute();
 </template>
 
 <style scoped>
-:root {
-    --primary-color: #453de1; /* Vert pour les éléments principaux */
-    --secondary-color: #34495e; /* Bleu foncé pour le texte */
-    --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #393c41; /* Couleur du texte principal */
-    --link-hover-color: #352fa2; /* Couleur au survol des liens */
-}
 
 /* Style général */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "PT Serif", serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -77,7 +69,8 @@ body {
 }
 
 .logo-svg {
-    width: 10vh;
+    margin-left: 1vh;
+    width: 8vh;
     height: auto;
     display: block;
     color: #42b983;
@@ -87,7 +80,6 @@ body {
 }
 
 .logo-svg:hover {
-    background-color: var(--primary-color);
     color: #453de1;
     background-size: 100% 100%;
 }
@@ -108,7 +100,7 @@ body {
 .nav-link {
     display: flex;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 1.1em;
     font-weight: 500;
     padding: 10px 15px;
@@ -118,7 +110,6 @@ body {
 }
 
 .nav-link:hover {
-    background-color: var(--primary-color);
     background-size: 100% 100%;
 }
 

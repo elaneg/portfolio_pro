@@ -9,7 +9,7 @@
         <!-- Section pour le bouton de téléchargement fixé en bas à droite -->
         <section class="download">
             <a :href="cvLink" download="cv_elane_grandmougin.pdf">
-                <button>Télécharger mon CV</button>
+                <button style="font-family: 'PT Serif', serif">Télécharger mon CV</button>
             </a>
         </section>
     </div>
@@ -39,11 +39,13 @@ export default {
 
 <style scoped>
 .cv {
-    font-family: Arial, sans-serif;
+    font-family: "PT Serif", serif;
     padding: 20px;
     max-width: 800px;
     margin: auto;
-    position: relative; /* Nécessaire pour positionner l'élément enfant */
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -53,6 +55,14 @@ header {
 
 header h1 {
     margin: 0;
+}
+
+.apropos {
+    color: var(--secondary-color);
+}
+
+.description h2 {
+    font-size: 6vh;
 }
 
 section {
@@ -66,25 +76,27 @@ section h2 {
 
 /* Section pour le bouton de téléchargement */
 section.download {
-    position: fixed;
     top: 75vh;
     right: 20px;
-    text-align: right;
+    text-align: center;
+    margin-top: 2vh;
 }
 
 section.download button {
-    background-color: #42b983;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 section.download button:hover {
-    background-color: #369f70;
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+    transition: transform 0.7s ease;
 }
 
 ul {
