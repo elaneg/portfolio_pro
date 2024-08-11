@@ -36,11 +36,11 @@ const route = useRoute();
 <style scoped>
 /* Variables de couleurs pour une personnalisation facile */
 :root {
-    --primary-color: #42b983; /* Vert pour les éléments principaux */
-    --secondary-color: #34495e; /* Bleu foncé pour le texte */
+    --primary-color: #007BFF; /* Vert pour les éléments principaux */
+    --secondary-color: #333333; /* Bleu foncé pour le texte */
     --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #2c3e50; /* Couleur du texte principal */
-    --link-hover-color: #369f70; /* Couleur au survol des liens */
+    --text-color: #333333; /* Couleur du texte principal */
+    --link-hover-color: #28A745; /* Couleur au survol des liens */
 }
 
 /* Style général */
@@ -84,7 +84,9 @@ body {
     gap: 20px;
 }
 
-.nav-link {
+.nav-link,
+.footer a
+{
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
@@ -94,9 +96,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.footer a:hover {
+    text-decoration: underline;
     background-color: var(--primary-color);
-    color: #008cff;
+    color: #453de1;
 }
 
 /* Style du contenu principal */
