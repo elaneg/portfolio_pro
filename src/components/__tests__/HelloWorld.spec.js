@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import Cv from "@/components/Cv.vue";
+import Cv from "@/components/About.vue";
 
 describe('Cv', () => {
   it('renders properly', () => {
