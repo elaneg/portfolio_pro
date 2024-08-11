@@ -1,15 +1,15 @@
 <template>
-    <div class="contact-container">
-        <h1>Me contacter <br /><br /></h1>
-        <div class="contact-details">
+    <div class="contact-container" aria-labelledby="contact-title">
+        <h1 id="contact-title">Me contacter <br /><br /></h1>
+        <div class="contact-details" aria-label="Détails de contact">
             Par mail :
-            <a href="mailto:elane.grandmougin@gmail.com" class="mailto">elane.grandmougin@gmail.com </a><br /><br />
-            <div class="social-links">
+            <a href="mailto:elane.grandmougin@gmail.com" class="mailto" aria-label="Envoyer un mail à Elane Grandmougin">elane.grandmougin@gmail.com</a><br /><br />
+            <div class="social-links" aria-label="Liens vers mes réseaux sociaux">
                 <p><strong>Et retrouvez-moi sur :</strong></p>
-                <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon profil GitHub">
                     GitHub
                 </a> |
-                <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon profil LinkedIn">
                     LinkedIn
                 </a>
             </div>
@@ -30,7 +30,6 @@ export default {
     margin: 0 auto;
     padding: 10vh;
     border-radius: 10px;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     text-align: center;
 }
 
@@ -47,7 +46,7 @@ export default {
 }
 
 .social-links {
-    box-shadow: 0 2px 4px rgba(0, 0, 0,100);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 100);
 }
 
 .social-links a {
