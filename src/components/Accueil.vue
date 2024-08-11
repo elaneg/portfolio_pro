@@ -21,25 +21,20 @@ export default {
 </script>
 
 <style scoped>
+
+template{
+    font-family: "PT Serif", serif;
+}
 .accueil {
     text-align: center;
     display: flex;
     justify-content: center;
     margin: 20vh auto;
     align-items: center;
-    background-color: var(--background-color);
-}
-
-.accueil-header h1 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 20px;
 }
 
 .tagline {
     font-size: 1.2em;
-    color: var(--text-color);
-    font-style: italic;
     margin: 1vh 20vh 0 0;
 }
 
@@ -56,13 +51,4 @@ export default {
     transition: transform 0.7s ease;
 }
 
-@media (min-width: 1024px) {
-    .accueil-header h1 {
-        font-size: 3em;
-    }
-
-    .tagline {
-        font-size: 1.5em;
-    }
-}
 </style>

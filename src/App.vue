@@ -1,68 +1,80 @@
-<script setup>
-import {RouterLink, RouterView, useRoute} from 'vue-router'
-import HeaderType from "@/components/HeaderType.vue";
-
-const route = useRoute();
-</script>
-
 <template>
     <div class="app">
         <header class="header">
             <a href="/" class="logo-link">
-                <img src="../public/logo_home.svg" alt="Accueil" class="logo-svg"/>
+                <img :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' " alt="Accueil" :class=" isDarkMode ? 'logo-svg-dark' : 'logo-svg'"/>
             </a>
             <nav class="nav">
-                <router-link to="/projets" class="nav-link">Mes projets</router-link>
-                <router-link to="/apropos" class="nav-link">À propos</router-link>
-                <router-link to="/contact" class="nav-link">Me contacter</router-link>
+                <router-link to="/projets" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
+                    <img :src="isDarkMode ? '../public/logo_projets_night.svg' : '../public/logo_projets.svg'" alt="projets" class="logo-svg-nav"/>
+                    Mes projets
+                </router-link>
+                <router-link to="/apropos" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
+                    <img :src="isDarkMode ? '../public/logo_about_night.svg' : '../public/logo_about.svg'" alt="à propos" class="logo-svg-nav"/>
+                    À propos
+                </router-link>
+                <router-link to="/contact" :class="isDarkMode ? 'nav-link-dark' : 'nav-link'">
+                    <img :src=" isDarkMode ? '../public/logo_contact_night.svg' : '../public/logo_contact.svg' " alt="contact" class="logo-svg-nav"/>
+                    Me contacter
+                </router-link>
+                <img
+                    :src="isDarkMode ? '../public/logo_light.svg' : '../public/logo_night.svg'"
+                    alt="toggle theme"
+                    class="logo-svg-theme"
+                    @click="toggleTheme"
+                />
             </nav>
         </header>
-
 
         <main class="main-content">
             <RouterView/>
         </main>
 
-        <footer class="footer">
+        <footer :class="isDarkMode ? 'footer_dark' : 'footer'">
             <p>&copy; 2024 - Elane Grandmougin</p>
         </footer>
     </div>
 </template>
 
-<style scoped>
-:root {
-    --primary-color: #453de1; /* Vert pour les éléments principaux */
-    --secondary-color: #34495e; /* Bleu foncé pour le texte */
-    --background-color: #f4f4f9; /* Fond clair pour une meilleure lisibilité */
-    --text-color: #393c41; /* Couleur du texte principal */
-    --link-hover-color: #352fa2; /* Couleur au survol des liens */
+<script setup>
+import {ref, watchEffect} from 'vue';
+
+const isDarkMode = ref(false);
+
+// Fonction pour basculer le thème
+const toggleTheme = () => {
+    isDarkMode.value = !isDarkMode.value;
+    document.body.className = isDarkMode.value ? 'dark-mode' : 'light-mode';
+};
+
+// Applique le thème initial basé sur les préférences de l'utilisateur ou un état par défaut
+if (localStorage.getItem('theme') === 'dark') {
+    isDarkMode.value = true;
+    document.body.className = 'dark-mode';
+} else {
+    document.body.className = 'light-mode';
 }
+
+// Enregistrez le thème choisi dans le stockage local
+watchEffect(() => {
+    localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light');
+});
+</script>
+
+<style scoped>
 
 /* Style général */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: "PT Serif", serif;
     margin: 0;
     padding: 0;
 }
 
-/*.app {*/
-/*    display: flex;*/
-/*    min-height: 100vh;*/
-/*    width: 100%;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/* Style du header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1vh;
-    background-color: white;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     position: fixed;
     top: 0;
     left: 0;
@@ -71,18 +83,29 @@ body {
 }
 
 .logo-svg {
-    width: 10vh;
+    margin-left: 1vh;
+    width: 8vh;
     height: auto;
     display: block;
-    color: #42b983;
-    border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
     background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
 }
 
 .logo-svg:hover {
-    background-color: var(--primary-color);
-    color: #453de1;
+    color: var(--primary-color);
+    background-size: 100% 100%;
+}
+
+.logo-svg-dark {
+    margin-left: 1vh;
+    width: 8vh;
+    height: auto;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgb(97, 92, 180, 100) 0%, rgb(97, 92, 180, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+}
+
+.logo-svg-dark:hover {
     background-size: 100% 100%;
 }
 
@@ -93,53 +116,73 @@ body {
 .nav {
     display: flex;
     gap: 20px;
+    margin-right: 2vh;
+}
+
+.logo-svg-nav {
+    margin-right: 1vh;
 }
 
 .nav-link {
+    display: flex;
     text-decoration: none;
-    color: var(--secondary-color);
     font-size: 1.1em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
+    color: var(--text-color-light);
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
     background: linear-gradient(to top, rgba(69, 61, 225, 100) 0%, rgba(69, 61, 225, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
 }
 
 .nav-link:hover {
-    background-color: var(--primary-color);
-    color: #453de1;
     background-size: 100% 100%;
 }
 
-/*!* Style du contenu principal *!*/
-/*.main-content {*/
-/*    padding-bottom: 60px;*/
-/*    padding-top: 15vh;*/
-/*    margin: 0 auto;*/
-/*    flex: 1;*/
-/*}*/
+.nav-link-dark {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--text-color-dark);
+    transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
+    background: linear-gradient(to top, rgb(97, 92, 180, 100) 0%, rgb(97, 92, 180, 100) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+}
+
+.nav-link-dark:hover {
+    background-size: 100% 100%;
+}
 
 /* Style du footer */
-.footer {
-    background-color: #ffffff;
-    color: #1b0742;
+.footer, .footer_dark {
     text-align: left;
     margin-left: 2vh;
     padding: 1vh;
-    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-.footer p {
+.footer_dark {
+    color: var(--text-color-dark);
+}
+
+.footer, .footer_dark p {
     margin: 10px 0;
 }
 
-.footer a {
-    color: var(--primary-color);
+.footer, .footer_dark a {
     text-decoration: none;
 }
 
+.logo-svg-theme {
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.logo-svg-theme:hover {
+    filter: brightness(1.2);
+}
 </style>

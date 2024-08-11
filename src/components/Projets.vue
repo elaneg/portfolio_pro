@@ -28,8 +28,8 @@ export default {
 </script>
 
 <style scoped>
-.home {
-    text-align: center;
+.projets {
+    font-family: "PT Serif", serif;
 }
 header {
     background: #f5f5f5;
