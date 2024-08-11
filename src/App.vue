@@ -12,9 +12,15 @@ const route = useRoute();
                 <img src="../public/logo_home.svg" alt="Accueil" class="logo-svg"/>
             </a>
             <nav class="nav">
-                <router-link to="/projets" class="nav-link">Mes projets</router-link>
-                <router-link to="/apropos" class="nav-link">À propos</router-link>
-                <router-link to="/contact" class="nav-link">Me contacter</router-link>
+                <router-link to="/projets" class="nav-link">
+                    <img src="../public/logo_projets.svg" alt="projets" class="logo-svg-nav"/>
+                    Mes projets</router-link>
+                <router-link to="/apropos" class="nav-link">
+                    <img src="../public/logo_about.svg" alt="à propos" class="logo-svg-nav"/>
+                    À propos</router-link>
+                <router-link to="/contact" class="nav-link">
+                    <img src="../public/logo_contact.svg" alt="contact" class="logo-svg-nav"/>
+                    Me contacter</router-link>
             </nav>
         </header>
 
@@ -95,7 +101,12 @@ body {
     gap: 20px;
 }
 
+.logo-svg-nav {
+    margin-right: 1vh;
+}
+
 .nav-link {
+    display: flex;
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.1em;
@@ -108,7 +119,6 @@ body {
 
 .nav-link:hover {
     background-color: var(--primary-color);
-    color: #453de1;
     background-size: 100% 100%;
 }
 
