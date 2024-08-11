@@ -80,11 +80,13 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: solid #cccccc 1px;
 }
 
 .logo-svg {
     margin-left: 1vh;
-    width: 8vh;
+    padding-bottom: 1vh;
+    width: 7vh;
     height: auto;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
@@ -98,7 +100,8 @@ body {
 
 .logo-svg-dark {
     margin-left: 1vh;
-    width: 8vh;
+    padding-bottom: 1vh;
+    width: 7vh;
     height: auto;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease, background-size .5s;
@@ -126,7 +129,7 @@ body {
 .nav-link {
     display: flex;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.7em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
@@ -142,7 +145,7 @@ body {
 .nav-link-dark {
     display: flex;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.7em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
@@ -153,6 +156,10 @@ body {
 
 .nav-link-dark:hover {
     background-size: 100% 100%;
+}
+
+.main-content {
+    margin: 15vh auto;
 }
 
 /* Style du footer */
@@ -167,10 +174,6 @@ body {
 
 .footer_dark {
     color: var(--text-color-dark);
-}
-
-.footer, .footer_dark p {
-    margin: 10px 0;
 }
 
 .footer, .footer_dark a {
