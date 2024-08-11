@@ -9,7 +9,7 @@
         <!-- Section pour le bouton de téléchargement fixé en bas à droite -->
         <section class="download">
             <a :href="cvLink" download="cv_elane_grandmougin.pdf">
-                <button style="font-family: 'PT Serif', serif">Télécharger mon CV</button>
+                <button role="button" aria-label="Télécharger le CV" style="font-family: 'PT Serif', serif">Télécharger mon CV</button>
             </a>
         </section>
     </div>
