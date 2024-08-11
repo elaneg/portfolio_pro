@@ -155,6 +155,10 @@ body {
     background-size: 100% 100%;
 }
 
+.main-content {
+    margin: 20vh auto;
+}
+
 /* Style du footer */
 .footer, .footer_dark {
     text-align: left;

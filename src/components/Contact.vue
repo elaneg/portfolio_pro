@@ -28,7 +28,6 @@ export default {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f9;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -36,7 +35,6 @@ export default {
 
 .contact-details {
     font-size: 1.1em;
-    color: #2c3e50;
 }
 
 .contact-details p {
