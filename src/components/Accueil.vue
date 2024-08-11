@@ -1,13 +1,17 @@
 <template>
     <div class="accueil">
+        <div class="taglines">
         <p class="tagline">
-            Bonjour, je suis Elane Grandmougin, développeuse full-stack.
+            Bonjour, je suis <strong>Elane Grandmougin</strong>, développeuse <strong>full-stack</strong>.
         </p>
+        <p class="tagline2">Je développe des applications en placant l'expérience utilisateur et l'inclusivité au coeur
+            de mes projets.</p>
+        </div>
         <div class="photo-container">
             <img :src="photoUrl" alt="Photo" class="photo"/>
         </div>
     </div>
-<!--    <img src="../../public/illustration_accueil.svg" alt="illustration" class="illu"/>-->
+      <img src="../../public/illustration_accueil.svg" alt="illustration" class="illu"/>
 </template>
 
 <script>
@@ -23,9 +27,10 @@ export default {
 
 <style scoped>
 
-template{
+template {
     font-family: "PT Serif", serif;
 }
+
 .accueil {
     text-align: center;
     display: flex;
@@ -34,8 +39,24 @@ template{
     align-items: center;
 }
 
+.taglines {
+    display: flex;
+    flex-direction: column;
+}
+
 .tagline {
     font-size: 3.2em;
+    margin: 1vh 20vh 0 0;
+    text-align: left;
+    z-index: 2;
+}
+
+.tagline strong {
+    font-weight: bold;
+}
+
+.tagline2 {
+    font-size: 1.5em;
     margin: 1vh 20vh 0 0;
     text-align: left;
     z-index: 2;
@@ -54,11 +75,11 @@ template{
     transition: transform 0.7s ease;
 }
 
-/*.illu {*/
-/*    position: absolute;*/
-/*    top: 30%;*/
-/*    left: 10%;*/
-/*    z-index: 1;*/
-/*}*/
+.illu {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 1;
+}
 
 </style>

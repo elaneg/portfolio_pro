@@ -80,6 +80,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: solid #cccccc 1px;
 }
 
 .logo-svg {
@@ -128,7 +129,7 @@ body {
 .nav-link {
     display: flex;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.7em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
@@ -144,7 +145,7 @@ body {
 .nav-link-dark {
     display: flex;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.7em;
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
@@ -158,7 +159,7 @@ body {
 }
 
 .main-content {
-    margin: 20vh auto;
+    margin: 15vh auto;
 }
 
 /* Style du footer */
@@ -173,10 +174,6 @@ body {
 
 .footer_dark {
     color: var(--text-color-dark);
-}
-
-.footer, .footer_dark p {
-    margin: 10px 0;
 }
 
 .footer, .footer_dark a {
