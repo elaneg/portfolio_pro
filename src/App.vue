@@ -25,11 +25,6 @@ const route = useRoute();
 
         <footer class="footer">
             <p>&copy; 2024 - Elane Grandmougin</p>
-            <p>
-                <a href="https://github.com/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon GitHub</a> |
-                <a href="https://www.linkedin.com/in/elanegrandmougin" target="_blank" rel="noopener noreferrer">Mon
-                    LinkedIn</a>
-            </p>
         </footer>
     </div>
 </template>
@@ -113,9 +108,10 @@ body {
 
 /* Style du footer */
 .footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
+    background-color: #ffffff;
+    color: #1b0742;
+    text-align: left;
+    margin-left: 2vh;
     padding: 1vh;
     width: 100%;
     position: absolute;
