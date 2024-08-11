@@ -201,7 +201,7 @@ body {
     text-align: left;
     margin-left: 2vh;
     padding: 1vh;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
