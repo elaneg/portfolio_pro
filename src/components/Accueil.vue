@@ -48,6 +48,12 @@ export default {
     border-radius: 50%;
     display: block;
     margin-top: 20px;
+    transition: transform 0.5s ease;
+}
+
+.photo:hover {
+    transform: scale(1.5);
+    transition: transform 0.7s ease;
 }
 
 @media (min-width: 1024px) {
