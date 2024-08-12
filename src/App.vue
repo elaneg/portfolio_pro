@@ -223,7 +223,7 @@ body {
 }
 
 .main-content {
-    margin: 15vh auto;
+    margin: 12vh auto;
 }
 
 /* Style du footer */
