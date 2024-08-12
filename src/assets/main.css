@@ -1,39 +1,39 @@
 :root {
-  --primary-color: #453de1;
-  --secondary-color: #6f80c4;
-  --background-color-light: #ffffff;
-  --text-color-light: #1a1a1a;
-  --background-color-dark: #242446;
-  --text-color-dark: #e7e7e7;
+    --primary-color: #453de1;
+    --secondary-color: #6f80c4;
+    --background-color-light: #ffffff;
+    --text-color-light: #1a1a1a;
+    --background-color-dark: #242446;
+    --text-color-dark: #e7e7e7;
 }
 
 /* Thème clair */
 body.light-mode, header.light-mode {
-  background-color: var(--background-color-light);
-  color: var(--background-color-dark);
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
 }
 
 /* Thème sombre */
 body.dark-mode, header.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 body, header {
-  transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
-  position: fixed;
-  z-index: 1000;
+    position: fixed;
+    z-index: 1000;
 }
 
 
 #app {
-  margin: auto 3vh auto 3vh;
-  padding: 1rem;
-  font-weight: normal;
-  font-family: "PT Serif", serif;
-  z-index: 1;
-  position: relative;
+    margin: auto 3vh auto 3vh;
+    padding: 1rem;
+    font-weight: normal;
+    font-family: "Mate", serif;
+    z-index: 1;
+    position: relative;
 }

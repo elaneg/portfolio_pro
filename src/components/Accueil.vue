@@ -4,7 +4,8 @@
             <p class="tagline">
                 Bonjour, je suis <strong>Elane Grandmougin</strong>, développeuse <strong>full-stack</strong>.
             </p>
-            <p class="tagline2">Je développe des applications en plaçant l'expérience utilisateur et l'inclusivité au cœur de mes projets.</p>
+            <p class="tagline2">Je développe des applications en plaçant l'expérience utilisateur et l'inclusivité au
+                cœur de mes projets.</p>
         </div>
         <div class="photo-container" aria-label="Photo de Elane Grandmougin">
             <img :src="photoUrl" alt="Photo de Elane Grandmougin" class="photo"/>
@@ -26,7 +27,7 @@ export default {
 
 <style scoped>
 template {
-    font-family: "PT Serif", serif;
+    font-family: "Mate", serif;
 }
 
 .accueil {

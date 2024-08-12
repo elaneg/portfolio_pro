@@ -37,11 +37,11 @@ export default {
                     description: 'Description du projet 1',
                     url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
                     image: '../public/lunetterie.jpg',
-                    tags: ['Tag1', 'Tag2']
+                    tags: ['ThreeJs', 'Tag2']
                 },
                 {
                     id: 2,
-                    name: 'Projet 2',
+                    name: 'Portfolio universitaire',
                     description: 'Description du projet 2',
                     url: '/projet2',
                     image: 'path/to/image2.jpg',
@@ -73,7 +73,7 @@ export default {
 }
 
 .projets {
-    font-family: "PT Serif", serif;
+    font-family: "Mate", serif;
 }
 
 .projects-grid {
@@ -101,7 +101,7 @@ export default {
 
 .project-card img.project-image {
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     margin-bottom: 1em;
 }
 

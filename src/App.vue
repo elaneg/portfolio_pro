@@ -83,7 +83,7 @@
 
                     <a href="mailto:elane.grandmougin@gmail.com" class="mailto">
                         <button role="button" aria-label="Contacter Elane Grandmougin "
-                                style="font-family: 'PT Serif', serif">
+                                style="font-family: 'Mate Serif', serif">
                             <img
                                     src="../public/logo_contact_night.svg "
                                     alt="contact"
@@ -129,7 +129,7 @@ watchEffect(() => {
 
 /* Style général */
 body {
-    font-family: "PT Serif", serif;
+    font-family: "Mate", serif;
     margin: 0;
     padding: 0;
 }
@@ -260,6 +260,7 @@ body {
 
 .footer p {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .mailto {
@@ -286,7 +287,7 @@ section.contact button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 1.2rem;
     transition: background-color 0.2s ease, transform 0.2s ease;
     display: flex;
 }

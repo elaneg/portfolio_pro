@@ -9,7 +9,7 @@
         <!-- Section pour le bouton de téléchargement fixé en bas à droite -->
         <section class="download" aria-label="Section de téléchargement du CV">
             <a :href="cvLink" download="cv_elane_grandmougin.pdf">
-                <button role="button" aria-label="Télécharger mon CV en PDF" style="font-family: 'PT Serif', serif">
+                <button role="button" aria-label="Télécharger mon CV en PDF" style="font-family: 'Mate Serif', serif">
                     Télécharger mon CV
                 </button>
             </a>
@@ -41,9 +41,9 @@ export default {
 
 <style scoped>
 .cv {
-    font-family: "PT Serif", serif;
+    font-family: "Mate", serif;
     padding: 20px;
-    max-width: 800px;
+    max-width: 160vh;
     margin: auto;
     position: relative;
     display: flex;
@@ -69,7 +69,7 @@ header h1 {
 
 .resume {
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 section {
