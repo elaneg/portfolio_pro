@@ -26,8 +26,8 @@ body, header {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
+  /*max-width: 1280px;*/
+  margin: auto 3vh auto 3vh;
   padding: 1rem;
   font-weight: normal;
   font-family: "PT Serif", serif;;
