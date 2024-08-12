@@ -33,6 +33,10 @@ export default {
     text-align: center;
 }
 
+.mailto {
+    color: #6565d0;
+}
+
 .contact-container h1 {
     font-size: 3.2em;
 }
@@ -46,11 +50,11 @@ export default {
 }
 
 .social-links {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 100);
+    box-shadow: 0 2px 4px #cccccc;
 }
 
 .social-links a {
-    color: var(--secondary-color);
+    color: #6565d0;
     text-decoration: none;
     margin: 0 5px;
 }
