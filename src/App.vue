@@ -3,59 +3,46 @@
         <header class="header" aria-label="Menu principal">
             <a href="/" class="logo-link">
                 <img
-                    :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' "
-                    alt="Accueil"
-                    :class=" isDarkMode ? 'logo-svg-dark' : 'logo-svg'"
-                    aria-label="Retour à l'accueil"
+                        :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' "
+                        alt="Accueil"
+                        :class=" isDarkMode ? 'logo-svg-dark' : 'logo-svg'"
+                        aria-label="Retour à l'accueil"
                 />
             </a>
             <nav class="nav" aria-label="Navigation principale">
                 <router-link
-                    to="/projets"
-                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
-                    aria-label="Accéder à la page de mes projets"
+                        to="/projets"
+                        :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
+                        aria-label="Accéder à la page de mes projets"
                 >
                     <img
-                        :src="isDarkMode ? '../public/logo_projets_night.svg' : '../public/logo_projets.svg'"
-                        alt="projets"
-                        class="logo-svg-nav"
-                        aria-hidden="true"
+                            :src="isDarkMode ? '../public/logo_projets_night.svg' : '../public/logo_projets.svg'"
+                            alt="projets"
+                            class="logo-svg-nav"
+                            aria-hidden="true"
                     />
                     Mes projets
                 </router-link>
                 <router-link
-                    to="/apropos"
-                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
-                    aria-label="Accéder à la page à propos de moi"
+                        to="/apropos"
+                        :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
+                        aria-label="Accéder à la page à propos de moi"
                 >
                     <img
-                        :src="isDarkMode ? '../public/logo_about_night.svg' : '../public/logo_about.svg'"
-                        alt="à propos"
-                        class="logo-svg-nav"
-                        aria-hidden="true"
+                            :src="isDarkMode ? '../public/logo_about_night.svg' : '../public/logo_about.svg'"
+                            alt="à propos"
+                            class="logo-svg-nav"
+                            aria-hidden="true"
                     />
                     À propos
                 </router-link>
-                <router-link
-                    to="/contact"
-                    :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
-                    aria-label="Accéder à la page de contact"
-                >
-                    <img
-                        :src=" isDarkMode ? '../public/logo_contact_night.svg' : '../public/logo_contact.svg' "
-                        alt="contact"
-                        class="logo-svg-nav"
-                        aria-hidden="true"
-                    />
-                    Me contacter
-                </router-link>
                 <img
-                    :src="isDarkMode ? '../public/logo_light.svg' : '../public/logo_night.svg'"
-                    alt="toggle theme"
-                    class="logo-svg-theme"
-                    @click="toggleTheme"
-                    aria-label="Changer le thème"
-                    role="button"
+                        :src="isDarkMode ? '../public/logo_light.svg' : '../public/logo_night.svg'"
+                        alt="toggle theme"
+                        class="logo-svg-theme"
+                        @click="toggleTheme"
+                        aria-label="Changer le thème"
+                        role="button"
                 />
             </nav>
         </header>
@@ -66,6 +53,49 @@
 
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
+
+            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">
+
+                <section class="reseaux" aria-label="Section des réseaux">
+                    <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
+                       aria-label="Lien vers mon profil GitHub">
+                        <img
+                                :src=" isDarkMode ? '../public/github_dark.png' : '../public/github.png' "
+                                alt="github"
+                                class="logo-footer"
+                                aria-hidden="true"
+                        />
+
+                    </a>
+                    <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank"
+                       rel="noopener noreferrer" aria-label="Lien vers mon profil LinkedIn">
+                        <img
+                                :src=" isDarkMode ? '../public/linkedin_dark.png' : '../public/linkedin.png' "
+                                alt="linkedin"
+                                class="logo-footer"
+                                aria-hidden="true"
+                        />
+
+                    </a>
+                </section>
+
+                <section class="contact" aria-label="Section de contact">
+
+                    <a href="mailto:elane.grandmougin@gmail.com" class="mailto">
+                        <button role="button" aria-label="Contacter Elane Grandmougin "
+                                style="font-family: 'PT Serif', serif">
+                            <img
+                                    src="../public/logo_contact_night.svg "
+                                    alt="contact"
+                                    class="logo-svg-nav"
+                                    aria-hidden="true"
+                            />
+                            Me contacter
+                        </button>
+                    </a>
+                </section>
+
+            </div>
         </footer>
     </div>
 </template>
@@ -198,12 +228,29 @@ body {
 
 /* Style du footer */
 .footer, .footer_dark {
+    width: 100%;
     text-align: left;
-    margin-left: 2vh;
-    padding: 1vh;
-    position: absolute;
+    padding: 1vh 2vh;
+    position: fixed;
     bottom: 0;
     left: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.mailto {
+    text-align: center;
+    padding: 2vh;
+}
+
+.logo-footer {
+    width: 6vh;
 }
 
 .footer_dark {
@@ -213,6 +260,43 @@ body {
 .footer, .footer_dark a {
     text-decoration: none;
 }
+
+section.contact button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+}
+
+section.contact button:hover {
+    background-color: var(--primary-color);
+    transition: background-color 0.7s ease;
+}
+
+.contact-details, .contact-details-dark {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reseaux {
+    margin-right: 3vh;
+
+}
+
+.reseaux a, section.contact a {
+    text-decoration: none;
+}
+
+img.logo-footer {
+    margin-right: 3vh;
+}
+
 
 .logo-svg-theme {
     cursor: pointer;
