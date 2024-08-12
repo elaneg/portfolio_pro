@@ -15,11 +15,15 @@
                     <img :src="project.image" :alt="project.name" class="project-image"/>
                     <h3 :id="'project-title-' + project.id">{{ project.name }}</h3>
                     <p :id="'project-desc-' + project.id">{{ project.description }}</p>
+                    <div class="tags">
+                        <span v-for="(tag, index) in project.tags" :key="index" class="tag">{{ tag }}</span>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 </template>
+
 
 <script>
 export default {
@@ -32,21 +36,24 @@ export default {
                     name: 'Lunetterie de Villeroy',
                     description: 'Description du projet 1',
                     url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
-                    image: '../public/lunetterie.jpg'
+                    image: '../public/lunetterie.jpg',
+                    tags: ['Tag1', 'Tag2']
                 },
                 {
                     id: 2,
                     name: 'Projet 2',
                     description: 'Description du projet 2',
                     url: '/projet2',
-                    image: 'path/to/image2.jpg'
+                    image: 'path/to/image2.jpg',
+                    tags: ['Tag3', 'Tag4']
                 },
                 {
                     id: 3,
                     name: 'Projet 3',
                     description: 'Description du projet 3',
                     url: '/projet3',
-                    image: 'path/to/image3.jpg'
+                    image: 'path/to/image3.jpg',
+                    tags: ['Tag5', 'Tag6']
                 }
             ]
         };
@@ -57,6 +64,7 @@ export default {
         }
     }
 };
+
 </script>
 
 <style scoped>
@@ -66,7 +74,6 @@ export default {
 
 .projets {
     font-family: "PT Serif", serif;
-    padding: 2em;
 }
 
 .projects-grid {
@@ -111,5 +118,21 @@ export default {
 .project-card p {
     font-size: 1.2rem;
 }
+
+.tags {
+    display: flex;
+    gap: 10px;
+    padding-left: 2vh;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: rgb(227, 151, 162);
+    padding: 0.3em 0.6em;
+    border-radius: 15px;
+    font-size: 1.1rem;
+}
+
 
 </style>
