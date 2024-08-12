@@ -65,6 +65,7 @@ template {
     border-radius: 50%;
     display: block;
     margin-top: 20px;
+    margin-right: 18vh;
     transition: transform 0.5s ease;
 }
 
