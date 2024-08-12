@@ -86,7 +86,7 @@ section.download {
     top: 75vh;
     right: 20px;
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 3vh;
 }
 
 section.download button {
@@ -96,7 +96,7 @@ section.download button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 20px;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
