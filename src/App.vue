@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <header class="header" aria-label="Menu principal">
+        <header :class=" isDarkMode ? 'header-dark' : 'header'" aria-label="Menu principal">
             <a href="/" class="logo-link">
                 <img
                         :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' "
@@ -83,7 +83,7 @@
 
                     <a href="mailto:elane.grandmougin@gmail.com" class="mailto">
                         <button role="button" aria-label="Contacter Elane Grandmougin "
-                                style="font-family: 'PT Serif', serif">
+                                style="font-family: 'Mate Serif', serif">
                             <img
                                     src="../public/logo_contact_night.svg "
                                     alt="contact"
@@ -129,7 +129,7 @@ watchEffect(() => {
 
 /* Style général */
 body {
-    font-family: "PT Serif", serif;
+    font-family: "Mate", serif;
     margin: 0;
     padding: 0;
 }
@@ -145,6 +145,23 @@ body {
     width: 100%;
     z-index: 1000;
     border-bottom: solid #cccccc 1px;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.header-dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: solid #cccccc 1px;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 .logo-svg {
@@ -224,6 +241,7 @@ body {
 
 .main-content {
     margin: 12vh auto;
+    z-index: 1;
 }
 
 /* Style du footer */
@@ -231,7 +249,7 @@ body {
     width: 100%;
     text-align: left;
     padding: 1vh 2vh;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     box-sizing: border-box;
@@ -242,6 +260,7 @@ body {
 
 .footer p {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .mailto {
@@ -268,7 +287,7 @@ section.contact button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 1.2rem;
     transition: background-color 0.2s ease, transform 0.2s ease;
     display: flex;
 }

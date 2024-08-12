@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import Projets from "@/components/Projets.vue";
 import Cv from "@/components/About.vue";
 import Accueil from "@/components/Accueil.vue";

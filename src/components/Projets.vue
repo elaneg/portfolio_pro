@@ -1,7 +1,7 @@
 <template>
     <div class="projets" aria-labelledby="projects-title">
         <section>
-            <h2 id="projects-title">Mes projets<br /><br /></h2>
+            <h2 id="projects-title">Mes projets<br/><br/></h2>
             <div class="projects-grid" aria-label="Liste des projets">
                 <div
                         v-for="project in projects"
@@ -12,13 +12,18 @@
                         @click="redirectToProject(project.url)"
                         role="link"
                         tabindex="0">
+                    <img :src="project.image" :alt="project.name" class="project-image"/>
                     <h3 :id="'project-title-' + project.id">{{ project.name }}</h3>
                     <p :id="'project-desc-' + project.id">{{ project.description }}</p>
+                    <div class="tags">
+                        <span v-for="(tag, index) in project.tags" :key="index" class="tag">{{ tag }}</span>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 </template>
+
 
 <script>
 export default {
@@ -26,9 +31,30 @@ export default {
     data() {
         return {
             projects: [
-                {id: 1, name: 'Projet 1', description: 'Description du projet 1', url: '/projet1'},
-                {id: 2, name: 'Projet 2', description: 'Description du projet 2', url: '/projet2'},
-                {id: 3, name: 'Projet 3', description: 'Description du projet 3', url: '/projet3'}
+                {
+                    id: 1,
+                    name: 'Lunetterie de Villeroy',
+                    description: 'Description du projet 1',
+                    url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
+                    image: '../public/lunetterie.jpg',
+                    tags: ['ThreeJs', 'Tag2']
+                },
+                {
+                    id: 2,
+                    name: 'Portfolio universitaire',
+                    description: 'Description du projet 2',
+                    url: '/projet2',
+                    image: 'path/to/image2.jpg',
+                    tags: ['Tag3', 'Tag4']
+                },
+                {
+                    id: 3,
+                    name: 'Projet 3',
+                    description: 'Description du projet 3',
+                    url: '/projet3',
+                    image: 'path/to/image3.jpg',
+                    tags: ['Tag5', 'Tag6']
+                }
             ]
         };
     },
@@ -38,47 +64,75 @@ export default {
         }
     }
 };
+
 </script>
 
 <style scoped>
-
 #projects-title {
     font-size: 2.0rem;
 }
 
 .projets {
-    font-family: "PT Serif", serif;
-    padding: 2em;
+    font-family: "Mate", serif;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /*grid-template-columns: auto auto auto auto;*/
-    gap: 180px;
+    grid-template-columns: auto auto auto auto;
+    gap: 70px;
 }
 
 .project-card {
-    background-color: #f5f5f5;
-    padding: 1em;
-    width: 50vh;
-    border-radius: 10px;
+    background-color: rgba(137, 167, 220, 0.59);
+    width: 60vh;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img.project-image {
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 1em;
+}
+
+.project-card h3, .project-card p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5em;
+    padding-left: 2vh;
 }
 
 .project-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    font-size: 1.7rem;
 }
 
 .project-card p {
-    margin: 0;
+    font-size: 1.2rem;
 }
+
+.tags {
+    display: flex;
+    gap: 10px;
+    padding-left: 2vh;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: rgb(227, 151, 162);
+    padding: 0.3em 0.6em;
+    border-radius: 15px;
+    font-size: 1.1rem;
+}
+
+
 </style>
