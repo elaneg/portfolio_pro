@@ -55,7 +55,7 @@
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
 
-            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">
+<!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
 
                 <section class="reseaux" aria-label="Section des réseaux">
                     <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
@@ -96,7 +96,7 @@
                     </a>
                 </section>
 
-            </div>
+<!--            </div>-->
         </footer>
     </div>
 </template>
@@ -190,7 +190,7 @@ body {
 }
 
 #google_translate_element {
-    margin-left: -100vh;
+    margin-left: -110vh;
 }
 
 .logo-svg {
@@ -229,7 +229,7 @@ body {
 .nav {
     display: flex;
     gap: 20px;
-    margin-right: 2vh;
+    margin-right: 5vh;
 }
 
 .logo-svg-nav {
@@ -287,7 +287,7 @@ body {
     align-items: center;
 }
 
-.footer p {
+.footer p, .footer_dark p {
     margin: 0;
     font-size: 1.2rem;
 }
@@ -354,4 +354,24 @@ img.logo-footer {
 .logo-svg-theme:hover {
     filter: brightness(1.2);
 }
+
+@media (max-width: 1024px) {
+
+    .reseaux {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+
+    img.logo-footer {
+        margin-right: 2vh;
+    }
+
+    .mailto button{
+        width: 30vh;
+    }
+
+}
+
 </style>
