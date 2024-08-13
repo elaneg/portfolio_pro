@@ -9,6 +9,7 @@
                         aria-label="Retour à l'accueil"
                 />
             </a>
+            <div id="google_translate_element" class="translate-button"></div>
             <nav class="nav" aria-label="Navigation principale">
                 <router-link
                         to="/projets"
@@ -102,8 +103,11 @@
 
 <script setup>
 import {ref, watchEffect} from 'vue';
+import {onMounted, onUpdated} from "vue";
+import {useRouter} from "vue-router";
 
 const isDarkMode = ref(false);
+const router = useRouter();
 
 // Fonction pour basculer le thème
 const toggleTheme = () => {
@@ -123,6 +127,27 @@ if (localStorage.getItem('theme') === 'dark') {
 watchEffect(() => {
     localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light');
 });
+
+//fonctions pr google trad
+const initGoogleTranslate = () => {
+    new google.translate.TranslateElement(
+        {pageLanguage: "fr", autoDisplay: false},
+        "google_translate_element"
+    );
+};
+
+onMounted(() => {
+    initGoogleTranslate();
+});
+
+onUpdated(() => {
+    initGoogleTranslate();
+});
+
+router.afterEach(() => {
+    initGoogleTranslate();
+});
+
 </script>
 
 <style scoped>
@@ -162,6 +187,10 @@ body {
     border-bottom: solid #cccccc 1px;
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
+}
+
+#google_translate_element {
+    margin-left: -100vh;
 }
 
 .logo-svg {
