@@ -190,7 +190,7 @@ body {
 }
 
 #google_translate_element {
-    margin-left: -100vh;
+    margin-left: -110vh;
 }
 
 .logo-svg {
@@ -229,7 +229,7 @@ body {
 .nav {
     display: flex;
     gap: 20px;
-    margin-right: 2vh;
+    margin-right: 5vh;
 }
 
 .logo-svg-nav {
@@ -287,7 +287,7 @@ body {
     align-items: center;
 }
 
-.footer p {
+.footer p, .footer_dark p {
     margin: 0;
     font-size: 1.2rem;
 }
@@ -362,16 +362,6 @@ img.logo-footer {
         flex-direction: row;
         justify-content: space-around;
         margin-right: 0;
-    }
-
-    .footer {
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .footer p {
-        font-size: 0.9rem;
     }
 
     img.logo-footer {
