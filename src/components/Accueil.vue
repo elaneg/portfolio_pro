@@ -81,4 +81,28 @@ template {
     left: 0;
     z-index: 1;
 }
+
+@media (max-width: 1024px) {
+
+    .accueil {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vh;
+    }
+
+    .tagline, .tagline2{
+        margin: 1vh 0 0 0;
+        text-align: center;
+    }
+
+    .photo {
+        margin-right: 0;
+    }
+
+    .illu {
+        margin-left: -10vh;
+    }
+
+}
+
 </style>

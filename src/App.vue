@@ -55,7 +55,7 @@
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
 
-            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">
+<!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
 
                 <section class="reseaux" aria-label="Section des réseaux">
                     <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
@@ -96,7 +96,7 @@
                     </a>
                 </section>
 
-            </div>
+<!--            </div>-->
         </footer>
     </div>
 </template>
@@ -354,4 +354,34 @@ img.logo-footer {
 .logo-svg-theme:hover {
     filter: brightness(1.2);
 }
+
+@media (max-width: 1024px) {
+
+    .reseaux {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+
+    .footer {
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    img.logo-footer {
+        margin-right: 2vh;
+    }
+
+    .mailto button{
+        width: 30vh;
+    }
+
+}
+
 </style>

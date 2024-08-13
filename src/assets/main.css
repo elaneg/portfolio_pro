@@ -37,3 +37,15 @@ header {
     z-index: 1;
     position: relative;
 }
+
+@media (max-width: 1024px) {
+
+    #app {
+        margin: auto 0 auto 0;
+        padding: 1rem;
+        font-weight: normal;
+        font-family: "Mate", serif;
+        z-index: 1;
+        position: relative;
+    }
+}
