@@ -134,5 +134,18 @@ export default {
     font-size: 1.1rem;
 }
 
+@media (max-width: 1024px) {
+
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card{
+        width: 70vh;
+    }
+}
+
 
 </style>

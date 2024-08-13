@@ -41,6 +41,7 @@ template {
 .taglines {
     display: flex;
     flex-direction: column;
+    margin-left: 10vh;
 }
 
 .tagline {
@@ -62,7 +63,7 @@ template {
 }
 
 .photo {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 50%;
     display: block;
     margin-top: 20px;
@@ -81,4 +82,37 @@ template {
     left: 0;
     z-index: 1;
 }
+
+@media (max-width: 1024px) {
+
+    .accueil {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vh;
+    }
+
+    .taglines {
+        margin-left: 0;
+    }
+
+    .illu {
+        top: 8%;
+        left: 5%;
+    }
+
+    .tagline, .tagline2{
+        margin: 1vh 0 0 0;
+        text-align: center;
+    }
+
+    .photo {
+        margin-right: 0;
+    }
+
+    .illu {
+        margin-left: -10vh;
+    }
+
+}
+
 </style>

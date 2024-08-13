@@ -9,6 +9,7 @@
                         aria-label="Retour à l'accueil"
                 />
             </a>
+            <div id="google_translate_element" class="translate-button"></div>
             <nav class="nav" aria-label="Navigation principale">
                 <router-link
                         to="/projets"
@@ -54,7 +55,7 @@
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
 
-            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">
+<!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
 
                 <section class="reseaux" aria-label="Section des réseaux">
                     <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
@@ -95,15 +96,18 @@
                     </a>
                 </section>
 
-            </div>
+<!--            </div>-->
         </footer>
     </div>
 </template>
 
 <script setup>
 import {ref, watchEffect} from 'vue';
+import {onMounted, onUpdated} from "vue";
+import {useRouter} from "vue-router";
 
 const isDarkMode = ref(false);
+const router = useRouter();
 
 // Fonction pour basculer le thème
 const toggleTheme = () => {
@@ -123,6 +127,27 @@ if (localStorage.getItem('theme') === 'dark') {
 watchEffect(() => {
     localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light');
 });
+
+//fonctions pr google trad
+const initGoogleTranslate = () => {
+    new google.translate.TranslateElement(
+        {pageLanguage: "fr", autoDisplay: false},
+        "google_translate_element"
+    );
+};
+
+onMounted(() => {
+    initGoogleTranslate();
+});
+
+onUpdated(() => {
+    initGoogleTranslate();
+});
+
+router.afterEach(() => {
+    initGoogleTranslate();
+});
+
 </script>
 
 <style scoped>
@@ -164,6 +189,10 @@ body {
     color: var(--text-color-dark);
 }
 
+#google_translate_element {
+    margin-left: -110vh;
+}
+
 .logo-svg {
     margin-left: 1vh;
     padding-bottom: 1vh;
@@ -200,7 +229,7 @@ body {
 .nav {
     display: flex;
     gap: 20px;
-    margin-right: 2vh;
+    margin-right: 5vh;
 }
 
 .logo-svg-nav {
@@ -258,7 +287,7 @@ body {
     align-items: center;
 }
 
-.footer p {
+.footer p, .footer_dark p {
     margin: 0;
     font-size: 1.2rem;
 }
@@ -325,4 +354,24 @@ img.logo-footer {
 .logo-svg-theme:hover {
     filter: brightness(1.2);
 }
+
+@media (max-width: 1024px) {
+
+    .reseaux {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+
+    img.logo-footer {
+        margin-right: 2vh;
+    }
+
+    .mailto button{
+        width: 30vh;
+    }
+
+}
+
 </style>
