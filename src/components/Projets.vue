@@ -36,7 +36,7 @@ export default {
                     name: 'Lunetterie de Villeroy',
                     description: 'Description du projet 1',
                     url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
-                    image: '../public/lunetterie.jpg',
+                    image: './public/lunetterie.jpg',
                     tags: ['ThreeJs', 'Tag2']
                 },
                 {

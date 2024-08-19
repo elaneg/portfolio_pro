@@ -7,17 +7,17 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: '/projets',
+            path: '/portfolio_pro_elane/dist/projets',
             name: 'Projets',
             component: Projets
         },
         {
-            path: '/apropos',
+            path: '/portfolio_pro_elane/dist/apropos',
             name: 'Apropos',
             component: Cv
         },
         {
-            path: '/',
+            path: '/portfolio_pro_elane/dist/',
             name: 'Accueil',
             component: Accueil,
         },
