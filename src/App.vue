@@ -1,3 +1,4 @@
+
 <template>
     <div class="app">
         <header :class=" isDarkMode ? 'header-dark' : 'header'" aria-label="Menu principal">
