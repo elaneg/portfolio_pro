@@ -1,7 +1,8 @@
+
 <template>
     <div class="app">
         <header :class=" isDarkMode ? 'header-dark' : 'header'" aria-label="Menu principal">
-            <a href="/" class="logo-link">
+            <a href="./" class="logo-link">
                 <img
                         :src=" isDarkMode ? '../public/logo_home_night.svg' : '../public/logo_home.svg' "
                         alt="Accueil"
@@ -12,7 +13,7 @@
             <div id="google_translate_element" class="translate-button"></div>
             <nav class="nav" aria-label="Navigation principale">
                 <router-link
-                        to="/projets"
+                        to="/portfolio_pro_elane/dist/projets"
                         :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
                         aria-label="Accéder à la page de mes projets"
                 >
@@ -25,7 +26,7 @@
                     Mes projets
                 </router-link>
                 <router-link
-                        to="/apropos"
+                        to="/portfolio_pro_elane/dist/apropos"
                         :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
                         aria-label="Accéder à la page à propos de moi"
                 >
