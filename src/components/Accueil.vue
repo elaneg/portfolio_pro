@@ -19,7 +19,7 @@ export default {
     name: 'Accueil',
     data() {
         return {
-            photoUrl: ('/photo.jpg')
+            photoUrl: ('./public/photo.jpg')
         };
     }
 };
