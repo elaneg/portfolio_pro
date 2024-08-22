@@ -514,7 +514,7 @@ img.logo-footer {
 
     section.contact button {
         width: fit-content;
-        font-size: 1rem;
+        font-size: 0.7rem;
         display: flex;
         align-items: center;
     }
