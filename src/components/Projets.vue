@@ -37,24 +37,16 @@ export default {
                     description: 'Description du projet 1',
                     url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
                     image: './public/lunetterie.jpg',
-                    tags: ['ThreeJs', 'Tag2']
+                    tags: ['ThreeJs', 'Blender']
                 },
                 {
                     id: 2,
                     name: 'Portfolio universitaire',
                     description: 'Description du projet 2',
-                    url: '/projet2',
-                    image: 'path/to/image2.jpg',
-                    tags: ['Tag3', 'Tag4']
+                    url: 'https://mmi21b07.mmi-troyes.fr/portfolio_univ/',
+                    image: './public/portfolio_univ.jpg',
+                    tags: ['VueJs', 'Front-end']
                 },
-                {
-                    id: 3,
-                    name: 'Projet 3',
-                    description: 'Description du projet 3',
-                    url: '/projet3',
-                    image: 'path/to/image3.jpg',
-                    tags: ['Tag5', 'Tag6']
-                }
             ]
         };
     },
