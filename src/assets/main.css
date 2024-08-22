@@ -44,12 +44,24 @@ header {
 
 @media (max-width: 1024px) {
 
+    header {
+        width: 90%;
+    }
+
+    body {
+        margin: 0;
+    }
+
     #app {
-        margin: auto 0 auto 0;
+        margin: 0;
         padding: 1rem;
         font-weight: normal;
         font-family: "Mate", serif;
         z-index: 1;
         position: relative;
+    }
+
+    .nav.nav-open {
+        background-color: var(--color-background)
     }
 }
