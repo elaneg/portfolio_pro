@@ -105,6 +105,9 @@
             </section>
 
         </footer>
+        <div class="carbonbadge">
+            <CarbonBadge/>
+        </div>
     </div>
 </template>
 
@@ -112,6 +115,7 @@
 import {ref, watchEffect} from 'vue';
 import {onMounted, onUpdated} from "vue";
 import {useRouter} from "vue-router";
+import CarbonBadge from "vue-carbonbadge";
 
 const isDarkMode = ref(false);
 const router = useRouter();
@@ -443,7 +447,7 @@ img.logo-footer {
         transition: transform 0.3s ease;
     }
 
-    .nav-open{
+    .nav-open {
         display: flex;
         transform: translateY(0);
     }

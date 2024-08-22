@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "vue": "^3.4.29",
+    "vue-carbonbadge": "^2.0.0",
     "vue-router": "^4.4.2"
   },
   "devDependencies": {
