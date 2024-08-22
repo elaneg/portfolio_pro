@@ -373,6 +373,30 @@ img.logo-footer {
         width: 30vh;
     }
 
+    .footer p, .footer_dark p {
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    .logo-footer {
+        width: 5vh;
+    }
+
+    .mailto {
+        width: fit-content;
+    }
+
+    .footer, .footer_dark a {
+        font-size: 3vh;
+    }
+
+    section.contact button {
+        width: fit-content;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
 }
 
 </style>

@@ -110,7 +110,8 @@ template {
     }
 
     .illu {
-        margin-left: -10vh;
+        margin-left: 0;
+        width: 90%;
     }
 
 }
