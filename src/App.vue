@@ -1,4 +1,3 @@
-
 <template>
     <div class="app">
         <header :class=" isDarkMode ? 'header-dark' : 'header'" aria-label="Menu principal">
@@ -56,48 +55,48 @@
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
 
-<!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
+            <!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
 
-                <section class="reseaux" aria-label="Section des réseaux">
-                    <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
-                       aria-label="Lien vers mon profil GitHub">
+            <section class="reseaux" aria-label="Section des réseaux">
+                <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
+                   aria-label="Lien vers mon profil GitHub">
+                    <img
+                            :src=" isDarkMode ? '../public/github_dark.png' : '../public/github.png' "
+                            alt="github"
+                            class="logo-footer"
+                            aria-hidden="true"
+                    />
+
+                </a>
+                <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank"
+                   rel="noopener noreferrer" aria-label="Lien vers mon profil LinkedIn">
+                    <img
+                            :src=" isDarkMode ? '../public/linkedin_dark.png' : '../public/linkedin.png' "
+                            alt="linkedin"
+                            class="logo-footer"
+                            aria-hidden="true"
+                    />
+
+                </a>
+            </section>
+
+            <section class="contact" aria-label="Section de contact">
+
+                <a href="mailto:elane.grandmougin@gmail.com" class="mailto">
+                    <button role="button" aria-label="Contacter Elane Grandmougin "
+                            style="font-family: 'Mate Serif', serif">
                         <img
-                                :src=" isDarkMode ? '../public/github_dark.png' : '../public/github.png' "
-                                alt="github"
-                                class="logo-footer"
+                                src="../public/logo_contact_night.svg "
+                                alt="contact"
+                                class="logo-svg-nav"
                                 aria-hidden="true"
                         />
+                        Me contacter
+                    </button>
+                </a>
+            </section>
 
-                    </a>
-                    <a href="https://www.linkedin.com/in/elane-grandmougin-1128a4224/" target="_blank"
-                       rel="noopener noreferrer" aria-label="Lien vers mon profil LinkedIn">
-                        <img
-                                :src=" isDarkMode ? '../public/linkedin_dark.png' : '../public/linkedin.png' "
-                                alt="linkedin"
-                                class="logo-footer"
-                                aria-hidden="true"
-                        />
-
-                    </a>
-                </section>
-
-                <section class="contact" aria-label="Section de contact">
-
-                    <a href="mailto:elane.grandmougin@gmail.com" class="mailto">
-                        <button role="button" aria-label="Contacter Elane Grandmougin "
-                                style="font-family: 'Mate Serif', serif">
-                            <img
-                                    src="../public/logo_contact_night.svg "
-                                    alt="contact"
-                                    class="logo-svg-nav"
-                                    aria-hidden="true"
-                            />
-                            Me contacter
-                        </button>
-                    </a>
-                </section>
-
-<!--            </div>-->
+            <!--            </div>-->
         </footer>
     </div>
 </template>
@@ -369,7 +368,7 @@ img.logo-footer {
         margin-right: 2vh;
     }
 
-    .mailto button{
+    .mailto button {
         width: 30vh;
     }
 
