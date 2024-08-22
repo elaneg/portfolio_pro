@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         redirectToProject(url) {
-            this.$router.push(url);
+            window.location.href=url;
         }
     }
 };

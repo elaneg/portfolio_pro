@@ -31,7 +31,7 @@ export default {
         utilisation de Symfony, et plus globalement, une expérience en back-end. Mon parcours m'a permis de maîtriser
         les langages tels que PHP, JS, CSS et SQL, tout en développant un sens aigu de la rigueur et de la résolution
         de problèmes techniques complexes. Aujourd'hui, je suis prête à mettre mes compétences au service de projets
-        innovants, et à continuer à apprendre de nouvelles compétences tout en m'adaptant aux nouvelles technologies
+        innovants, et à prendre de l'expérience tout en m'adaptant aux nouvelles technologies
         et différents langages.
       `,
         };
