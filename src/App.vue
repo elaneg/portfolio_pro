@@ -10,7 +10,16 @@
                 />
             </a>
             <div id="google_translate_element" class="translate-button"></div>
-            <nav class="nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <nav :class=" isDarkMode ? 'nav-dark' : 'nav'" aria-label="Navigation principale">
                 <router-link
                         to="/portfolio_pro_elane/dist/projets"
                         :class="isDarkMode ? 'nav-link-dark' : 'nav-link'"
@@ -55,7 +64,6 @@
         <footer :class="isDarkMode ? 'footer_dark' : 'footer'" aria-label="Pied de page">
             <p>&copy; 2024 - Elane Grandmougin</p>
 
-            <!--            <div :class="isDarkMode ? 'contact-details-dark' :'contact-details'" aria-label="Détails de contact">-->
 
             <section class="reseaux" aria-label="Section des réseaux">
                 <a href="https://github.com/elaneg" target="_blank" rel="noopener noreferrer"
@@ -96,7 +104,6 @@
                 </a>
             </section>
 
-            <!--            </div>-->
         </footer>
     </div>
 </template>
@@ -146,6 +153,20 @@ onUpdated(() => {
 
 router.afterEach(() => {
     initGoogleTranslate();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    const nav_dark = document.querySelector('.nav-dark');
+
+    menuToggle.addEventListener('click', function () {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isOpen);
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('nav-open');
+        nav_dark.classList.toggle('nav-open-dark')
+    });
 });
 
 </script>
@@ -226,7 +247,13 @@ body {
     text-decoration: none;
 }
 
-.nav {
+nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 5vh;
+}
+
+.nav-dark {
     display: flex;
     gap: 20px;
     margin-right: 5vh;
@@ -355,7 +382,103 @@ img.logo-footer {
     filter: brightness(1.2);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 @media (max-width: 1024px) {
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5em;
+        z-index: 1001;
+        margin-right: 3vh;
+    }
+
+    .menu-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #cccccc;
+        transition: transform 0.3s ease;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--background-color-light);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-dark {
+        display: none;
+        flex-direction: column;
+        background-color: var(--background-color-dark);
+        color: var(--text-color-dark);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-open{
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .nav-open-dark {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .nav-link-dark {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .menu-toggle.active .menu-icon span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-toggle.active .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .menu-icon span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .logo-svg-theme {
+        width: 5%;
+        margin-left: 2vh;
+    }
 
     .reseaux {
         display: flex;

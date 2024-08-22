@@ -60,4 +60,8 @@ header {
         z-index: 1;
         position: relative;
     }
+
+    .nav.nav-open {
+        background-color: var(--color-background)
+    }
 }
