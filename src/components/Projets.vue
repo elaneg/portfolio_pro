@@ -63,7 +63,7 @@ export default {
                     name: 'Portfolio professionnel',
                     description: 'J\'ai créé ce portfolio dans le cadre de ma dernière année de formation. ' +
                         'Il avait donc un objectif à la fois professionnel, universitaire et un peu personnel. ' +
-                        'Ayant plus d\'expérience en back-end, j\'ai voulu faire quelque chose visuellement simple,' +
+                        'Ayant plus d\'expérience en back-end, j\'ai voulu faire quelque chose visuellement simple et minimaliste,' +
                         ' et qui soit par-dessus tout accessible et facile à utiliser. Le développement s\'est réalisé étape' +
                         ' par étape, à commencer par la création des branches DEV et MASTER sur github, l\'intégration,' +
                         ' l\'ajout des styles et enfin, la mise en production. Cette dernière a été un défi' +
