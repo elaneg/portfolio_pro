@@ -107,6 +107,7 @@ export default {
 .project-card {
     background-color: rgba(137, 167, 220, 0.59);
     width: 60vh;
+    height: 120vh;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -114,6 +115,7 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: left;
+    position: relative;
 }
 
 .project-card:hover {
@@ -122,7 +124,8 @@ export default {
 }
 
 .project-card img.project-image {
-    max-width: 100%;
+    width: 430px;
+    height: 220px;
     border-radius: 20px 20px 0 0;
     margin-bottom: 1em;
 }
@@ -138,15 +141,19 @@ export default {
 }
 
 .project-card p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 2vh;
 }
 
 .tags {
+    position: absolute;
     display: flex;
     gap: 10px;
     padding-left: 2vh;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+    bottom: 0;
+    left: 0;
 }
 
 .tag {
@@ -154,6 +161,7 @@ export default {
     padding: 0.3em 0.6em;
     border-radius: 15px;
     font-size: 1.1rem;
+    border: solid 0.5px;
 }
 
 @media (max-width: 1024px) {
