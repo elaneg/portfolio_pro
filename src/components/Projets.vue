@@ -34,7 +34,15 @@ export default {
                 {
                     id: 1,
                     name: 'Lunetterie de Villeroy',
-                    description: 'Description du projet 1',
+                    description: 'Ce projet consistait à modéliser les bâtiments de la lunetterie en 3D' +
+                        ' et de l\'intégrer à un site, à réaliser en groupe. Avec mes deux camarades, nous avons' +
+                        ' choisi de coder le site en ThreeJs afin d\'intégrer le modèle 3D et de pouvoir intéragir avec.' +
+                        ' ThreeJs n\'étant pas vue en cours à l\'IUT, il a fallu nous documenter nous-mêmes sur cette technologie' +
+                        ' et sa mise en production, ce qui a consisté tout le défi de ce projet. En premier lieu il a fallu créer' +
+                        ' le modèle avec Blender, puis développer le site. En parallèle nous avons créé un site type kickstarter' +
+                        ' afin d\'avoir un suivi du développement du projet. En groupe, nous avons créé une agence fictive,' +
+                        ' Format3D, et avons écrit un pitch autour de l\'agence et du site pour simuler' +
+                        ' la demande d\'investissements dans le projet.',
                     url: 'https://mmi21b07.mmi-troyes.fr/ws501/',
                     image: './public/lunetterie.jpg',
                     tags: ['ThreeJs', 'Blender']
@@ -42,9 +50,31 @@ export default {
                 {
                     id: 2,
                     name: 'Portfolio universitaire',
-                    description: 'Description du projet 2',
+                    description: 'Dans le cadre de la fin du BUT MMI, nous devions réaliser un portfolio au format libre qui reprend' +
+                        'chaque compétence à valider ; Ce site one-page montre quelques projets réalisés en cours et à quelles' +
+                        ' compétences (AC, Apprentissages Critiques) ils correspondent. J\'ai réalisé ce site avec VueJs pour un' +
+                        ' rendu plus dynamique et pour pouvoir gérer les thèmes sombres et clairs.',
                     url: 'https://mmi21b07.mmi-troyes.fr/portfolio_univ/',
                     image: './public/portfolio_univ.jpg',
+                    tags: ['VueJs', 'Front-end']
+                },
+                {
+                    id: 3,
+                    name: 'Portfolio professionnel',
+                    description: 'J\'ai créé ce portfolio dans le cadre de ma dernière année de formation. ' +
+                        'Il avait donc un objectif à la fois professionnel, universitaire et un peu personnel. ' +
+                        'Ayant plus d\'expérience en back-end, j\'ai voulu faire quelque chose visuellement simple,' +
+                        ' et qui soit par-dessus tout accessible et facile à utiliser. Le développement s\'est réalisé étape' +
+                        ' par étape, à commencer par la création des branches DEV et MASTER sur github, l\'intégration,' +
+                        ' l\'ajout des styles et enfin, la mise en production. Cette dernière a été un défi' +
+                        ' car c\'était la première que je la faisais entièrement seule, sans enseignant ou chef de projet,' +
+                        ' et ne s\'est pas déroulée sans encombre. D\'un point de vue plus technique, j\'ai choisi de développer' +
+                        ' ce portfolio en utilisant VueJs car je souhaitais le rendre dynamique,' +
+                        ' sans temps de recharge entre les onglets. J\'ai également pris soin de le rendre accessible ' +
+                        'aux lecteurs d\'écran via des balises ARIA dans la structure HTML, et ai effectué ' +
+                        'des recherches dessus de mon côté afin de les mettre correctement en place.',
+                    url: 'https://mmi21b07.mmi-troyes.fr/portfolio_univ/',
+                    image: './public/protfolio_pro.jpg',
                     tags: ['VueJs', 'Front-end']
                 },
             ]
@@ -52,7 +82,7 @@ export default {
     },
     methods: {
         redirectToProject(url) {
-            window.location.href=url;
+            window.location.href = url;
         }
     }
 };
@@ -134,7 +164,7 @@ export default {
         align-items: center;
     }
 
-    .project-card{
+    .project-card {
         width: 70vh;
     }
 }
