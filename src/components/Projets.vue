@@ -124,8 +124,7 @@ export default {
 }
 
 .project-card img.project-image {
-    width: 430px;
-    height: 220px;
+    width: 100%;
     border-radius: 20px 20px 0 0;
     margin-bottom: 1em;
 }
@@ -170,6 +169,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 2vh;
     }
 
     .project-card {
